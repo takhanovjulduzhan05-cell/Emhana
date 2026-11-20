@@ -1,0 +1,27 @@
+====================================================
+      EMHANA | CAPSTONE PROJECT | M1-M3 (v0.3)
+      Authors: Alisher & Zhuldyzkhan
+====================================================
+DOCTORS:
+  D1 | A. Saparov | Therapist
+  D2 | M. Omarova | Pediatrician
+SLOTS:
+  S1 | 2026-11-23T09:00 | AVAILABLE
+  S2 | 2026-11-23T10:00 | AVAILABLE
+  S3 | 2026-11-23T11:00 | AVAILABLE
+[BOOKED] A-001 and A-002
+QUEUE SCREEN:
+  R-001 | Aruzhan | S1
+  R-002 | Dias | S2
+[CANCELLED] A-001
+QUEUE SCREEN:
+  R-001 | Dias | S2
+[UNDO] Cancellation reversed
+QUEUE SCREEN:
+  R-001 | Aruzhan | S1
+  R-002 | Dias | S2
+[BLOCKED] Slot already reserved
+[PROXY] Access denied
+[STAFF ACCESS] 2 bookings visible
+[PASS] M3 demo completed
+REMINDERS SENT: 4

@@ -1,0 +1,11 @@
+digraph Clinic {
+ graph [rankdir=LR, bgcolor="white", pad="0.35", nodesep="0.65", ranksep="1.0", fontname="Arial"];
+ node [shape=record, fontname="Arial", fontsize=11, style="rounded,filled", fillcolor="#eef4ff", color="#54749b"];
+ edge [color="#54749b", arrowsize=0.8, fontsize=10];
+ App [label="{App|composition root}", fillcolor="#fff4e5"];
+ UI [label="{ui|ClinicConsole}"];
+ S [label="{service|AppointmentService\nQueueFacade\nRoleAccessProxy\nCommandHistory}"];
+ D [label="{domain|Doctor / TimeSlot\nAppointment / ClinicRepository\nSlotState}", fillcolor="#edfaef"];
+ I [label="{infra|InMemoryClinicRepository\nSmsReminderAdapter\nLegacySmsGateway}", fillcolor="#f4eefe"];
+ App -> UI; App -> S; App -> I; UI -> S; S -> D; I -> D; I -> S;
+}

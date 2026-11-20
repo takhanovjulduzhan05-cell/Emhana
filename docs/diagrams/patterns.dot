@@ -1,0 +1,23 @@
+digraph Patterns {
+ graph [rankdir=LR, bgcolor="white", pad="0.3", nodesep="0.35", ranksep="0.65", fontname="Arial"];
+ node [shape=box, style="rounded,filled", color="#4573a4", fillcolor="#edf4ff", fontname="Arial", fontsize=10];
+ App [label="App\n(Composition root)",fillcolor="#fff2d5"];
+ Console [label="ClinicConsole\n(UI)"];
+ Service [label="AppointmentService\n(Book / Cancel / Restore)"];
+ Repo [label="ClinicRepository\n(Port)",fillcolor="#e8f8e9"];
+ Inmem [label="InMemoryClinicRepository"];
+ Slot [label="SlotState\nAvailable / Reserved"];
+ Builder [label="Appointment.Builder"];
+ Chain [label="BookingValidator\nPatientValidator -> SlotValidator"];
+ Observer [label="BookingObserver\nReminderObserver"];
+ Adapter [label="ReminderPort\nSmsReminderAdapter"];
+ Gateway [label="LegacySmsGateway"];
+ Command [label="CommandHistory\nCancelAppointmentCommand"];
+ Proxy [label="RoleAccessProxy\nRealAppointmentAccess"];
+ Queue [label="QueueFacade"];
+ Strategy [label="QueueStrategy\nBySlot / ByPatient"];
+ Iterator [label="QueueSnapshot\n(Iterator)"];
+ Factory [label="TicketFactory\nRegular / Priority"];
+ App -> Console; Console -> Service; Console -> Command; Console -> Queue; Console -> Proxy;
+ Service -> Repo; Service -> Chain; Service -> Observer; Service -> Builder; Repo -> Slot; Inmem -> Repo [style=dashed]; Observer -> Adapter; Adapter -> Gateway; Command -> Service; Proxy -> Service; Queue -> Service; Queue -> Strategy; Queue -> Iterator; Queue -> Factory;
+}

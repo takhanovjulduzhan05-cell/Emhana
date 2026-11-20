@@ -1,0 +1,10 @@
+{
+  "recommendations": [
+    "vscjava.vscode-java-pack",
+    "github.vscode-pull-request-github",
+    "eamodio.gitlens",
+    "sonarsource.sonarlint-vscode",
+    "bierner.markdown-mermaid",
+    "yzhang.markdown-all-in-one"
+  ]
+}
