@@ -54,8 +54,8 @@ stateDiagram-v2
 
 ## UML және архитектура сызбалары
 
-- [Архитектура сызбасы DOT](docs/diagrams/architecture.dot)
-- [11 паттерн UML байланыстары DOT](docs/diagrams/patterns.dot)
+- [Архитектура PNG](docs/diagrams/architecture.png)
+- [11 паттерн UML байланыстары PNG](docs/diagrams/patterns.png)
 
 ## Паттерндер
 
